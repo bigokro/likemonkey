@@ -3,7 +3,7 @@
 // @namespace     http://cloudteam.integritas.com.br
 // @description   Proof of concept for Meta Like project
 // @include       http://www.facebook.com/
-// @require       http://jwebsocket.googlecode.com/svn-history/r1437/trunk/jWebSocketClient/web/res/js/socket.io/socket.io.js
+// @require       https://github.com/bigokro/likemonkey/raw/master/socket.io.min.js
 // ==/UserScript==
 var $$ = function ()
     {
@@ -46,7 +46,7 @@ function loadLibs() {
         // dynamically creates a script tag
         var proto = document.createElement('script');
         proto.type = 'text/javascript';
-        proto.src = 'http://jwebsocket.googlecode.com/svn-history/r1437/trunk/jWebSocketClient/web/res/js/socket.io/socket.io.js';
+        proto.src = 'https://github.com/bigokro/likemonkey/raw/master/socket.io.min.js';
 		proto.async = true;
 		var dhead = document.getElementsByTagName('head')[0] || document.documentElement;
         dhead.insertBefore(proto, dhead.firstChild);
