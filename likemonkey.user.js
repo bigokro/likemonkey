@@ -39,7 +39,8 @@ function waitForLibs() {
 			var io = window.io;
 			var socket = io.connect('http://localhost:3080');
 			socket.on('news', function (data) {
-				console.log(data);
+				//console.log(data);
+				alert(data);
 				//socket.emit('my other event', { my: 'data' });
 			});	
 		}
