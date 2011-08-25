@@ -3,7 +3,7 @@
 // @namespace     http://cloudteam.integritas.com.br
 // @description   Proof of concept for Meta Like project
 // @include       http://www.facebook.com/
-// @require       https://github.com/bigokro/likemonkey/raw/master/socket.io.min.js
+// @require       http://localhost:3080/socket.io/socket.io.js
 // ==/UserScript==
 var $$ = function ()
     {
@@ -16,20 +16,15 @@ function waitForLibs() {
 		
 		if (typeof unsafeWindow.io == 'undefined') {
 			// set to check every 100 milliseconds if the libary has loaded
-			//alert('not yet');
-			window.setTimeout(waitForLibs, 1000);
+			window.setTimeout(waitForLibs, 100);
 		} else {
 			// Open a socket to a node.js process running locally
-			//alert('yet!');
-//			unsafeWindow.io = this.io;
 			var io = unsafeWindow.io;
 			var socket = io.connect('http://localhost:3080');
-			//socket.isXDomain = function() { return true; };
 			socket.on('news', function (data) {
 				//console.log(data);
-				alert(data);
+				alert("hello " + data['hello']);
 			});	
-//			unsafeWindow.socket = socket;
 		}
 }
 
@@ -38,7 +33,6 @@ function loadLibs() {
         var proto = document.createElement('script');
         proto.type = 'text/javascript';
         proto.src = 'http://localhost:3080/socket.io/socket.io.js';
-		//proto.async = true;
 		var dhead = document.getElementsByTagName('head')[0] || document.documentElement;
         dhead.insertBefore(proto, dhead.firstChild);
         waitForLibs();
