@@ -1,0 +1,19 @@
+{
+  "name": "Like Monkey",
+  "version": "1.0",
+  "description": "Proof of concept for Meta Like project",
+  "icons": { "16": "icon.jpg" },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*"],
+      "js": ["socket.io.js", "likemonkey.chrome.js"]
+    }
+  ],
+  "permissions": [
+    "http://www.facebook.com/",
+    "http://localhost:3080/"
+  ]
+}
