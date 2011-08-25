@@ -14,19 +14,19 @@ The user script has two main effects on the user viewing Facebook:
 
 ### Installation
 
-# If you don't have the Greasemonkey plugin for Firefox yet, you must install it
-# Install the likemonkey.user.js script, either by opening it up as a local file (after cloning this repo), or by clicking on the "Raw" link for the file here in Github.
-# Open your Firefox browser to your Facebook page. You should already be seeing the Like links changed.
-# Install node.js and the socket.io module on your local machine
-# I set this up running on a local VM, so I was forwarding my host port 3080 to the VM's port 80. You should either set up a similar forwarding, or change the code in `likemonkey.js` to listen on 3080:
+- If you don't have the Greasemonkey plugin for Firefox yet, you must install it
+- Install the likemonkey.user.js script, either by opening it up as a local file (after cloning this repo), or by clicking on the "Raw" link for the file here in Github.
+- Open your Firefox browser to your Facebook page. You should already be seeing the Like links changed.
+- Install node.js and the socket.io module on your local machine
+- I set this up running on a local VM, so I was forwarding my host port 3080 to the VM's port 80. You should either set up a similar forwarding, or change the code in `likemonkey.js` to listen on 3080:
 
   app.listen(3080);
  
-# Start up the node server:
+- Start up the node server:
 
   sudo node likemonkey.js
 
-# Reload the Facebook page. It should now pop up an alert with the message `hello world` (of course)
+- Reload the Facebook page. It should now pop up an alert with the message "hello world" (of course)
 
 
 Enjoy, you big fat ape!
