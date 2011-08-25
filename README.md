@@ -24,7 +24,7 @@ The user script has two main effects on the user viewing Facebook:
  
 - Start up the node server:
 
-  	sudo node likemonkey.js
+    	sudo node likemonkey.js
 
 - Reload the Facebook page. It should now pop up an alert with the message "hello world" (of course)
 
