@@ -3,7 +3,7 @@
 // @namespace     http://cloudteam.integritas.com.br
 // @description   Proof of concept for Meta Like project
 // @include       http://www.facebook.com/
-// @require       http://localhost:3080/socket.io/socket.io.js
+// @require       https://github.com/bigokro/likemonkey/raw/master/socket.io.js
 // ==/UserScript==
 var $$ = function ()
     {
