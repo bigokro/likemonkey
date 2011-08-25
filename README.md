@@ -20,11 +20,11 @@ The user script has two main effects on the user viewing Facebook:
 - Install node.js and the socket.io module on your local machine
 - I set this up running on a local VM, so I was forwarding my host port 3080 to the VM's port 80. You should either set up a similar forwarding, or change the code in `likemonkey.js` to listen on 3080:
 
-  app.listen(3080);
+    	app.listen(3080);
  
 - Start up the node server:
 
-  sudo node likemonkey.js
+  	sudo node likemonkey.js
 
 - Reload the Facebook page. It should now pop up an alert with the message "hello world" (of course)
 
