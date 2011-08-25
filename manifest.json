@@ -4,7 +4,7 @@
   "description": "Proof of concept for Meta Like project",
   "icons": { "16": "icon.jpg" },
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.jpg"
   },
   "content_scripts": [
     {
